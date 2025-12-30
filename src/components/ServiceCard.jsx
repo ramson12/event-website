@@ -18,8 +18,10 @@ export default function ServiceCard({ service }) {
 
   return (
     <motion.div
+    
       whileHover={{ y: -6 }}
-      transition={{ duration: 0.3 }}
+      whileTap={{ scale: 0.97 }}
+      transition={{ type: "spring", stiffness: 260, damping: 20 }}
       className="
         group
         bg-zinc-900

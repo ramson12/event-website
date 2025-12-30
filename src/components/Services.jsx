@@ -4,10 +4,8 @@ import ServiceCard from "./ServiceCard";
 
 export default function Services() {
   return (
-    <section
-      id="services"
-      className="bg-black py-20 px-4"
-    >
+    <section id="services" className="bg-black py-20 px-4">
+
       {/* HEADER */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -18,7 +16,6 @@ export default function Services() {
         <h2 className="text-white text-3xl md:text-4xl font-bold">
           Our Services
         </h2>
-
         <p className="mt-4 text-gray-400 text-sm md:text-base">
           From concept to execution, we deliver seamless experiences
           tailored to your celebration.
@@ -26,14 +23,20 @@ export default function Services() {
       </motion.div>
 
       {/* SERVICES GRID */}
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto"
+      >
         {services.map((service) => (
           <ServiceCard
             key={service.title}
             service={service}
           />
         ))}
-      </div>
+      </motion.div>
+
     </section>
   );
 }

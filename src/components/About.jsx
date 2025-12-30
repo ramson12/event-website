@@ -25,8 +25,8 @@ export default function About() {
 
         {/* STORY */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0  }}
           viewport={{ once: true }}
           className="space-y-6 text-gray-300 leading-relaxed text-center"
         >
