@@ -1,31 +1,29 @@
 import { motion } from "framer-motion";
-import StatusBadge from "./StatusBadge";
+import { useNavigate } from "react-router-dom";
 
-export default function EventCard({ event, onSelect }) {
+export default function EventCard({ event }) {
+  const navigate = useNavigate();
+
   const eventDate = new Date(event.date);
   const day = eventDate.getDate();
   const month = eventDate.toLocaleString("default", { month: "short" });
 
   return (
     <motion.div
-      whileHover={{ y: -6 }}
-      transition={{ duration: 0.25, ease: "easeOut" }}
-      onClick={() => onSelect(event)}
+      whileHover={{ y: -8 }}
+      transition={{ duration: 0.25 }}
+      onClick={() => navigate(`/events/${event.id}`)}
       className="
-        group relative
-        h-[300px]
-        max-w-[280px] w-full
-        mx-auto
-        rounded-xl overflow-hidden
-        cursor-pointer
-        bg-zinc-900
-        transition-all
-        
-        transition-all duration-300
-
-        hover:border-transparent
-        hover:ring-0
-        hover:shadow-[0_0_28px_rgba(236,72,153,0.35)]
+      group relative
+      h-[360px]
+      rounded-2xl
+      overflow-hidden
+      cursor-pointer
+      bg-zinc-900
+      border border-zinc-800
+      hover:border-pink-500/40
+      hover:shadow-[0_0_35px_rgba(236,72,153,0.25)]
+      transition-all
       "
     >
       {/* IMAGE */}
@@ -33,66 +31,56 @@ export default function EventCard({ event, onSelect }) {
         src={event.image}
         alt={event.title}
         className="
-          absolute inset-0 w-full h-full object-cover
-          transition-transform duration-500
-          group-hover:scale-105
+        absolute inset-0
+        w-full h-full
+        object-cover
+        transition-transform duration-700
+        group-hover:scale-110
         "
       />
 
-      {/* OVERLAY */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent" />
+      {/* DARK GRADIENT */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
 
       {/* DATE BADGE */}
-      <div className="absolute top-3 left-3 bg-black/70 backdrop-blur px-2.5 py-1.5 rounded-md text-center">
-        <p className="text-white text-sm font-bold leading-none">{day}</p>
-        <p className="text-[10px] text-gray-300 uppercase">{month}</p>
+      <div className="absolute top-4 left-4 bg-black/70 backdrop-blur px-3 py-1 rounded-md text-center">
+        <p className="text-white text-sm font-bold">{day}</p>
+        <p className="text-xs text-gray-400 uppercase">{month}</p>
       </div>
 
-      {/* STATUS BADGE */}
-      <div className="absolute top-3 right-3">
-        <StatusBadge status={event.status} />
+      {/* CATEGORY */}
+      <div className="absolute top-4 right-4 text-xs bg-pink-500/80 px-3 py-1 rounded-full">
+        {event.category}
       </div>
 
       {/* CONTENT */}
-      <div className="absolute bottom-0 w-full p-4 text-white">
-        <p className="text-xs text-pink-400">
-          {event.category}
-        </p>
+      <div className="absolute bottom-0 p-5 text-white">
 
-        <h3 className="text-lg font-semibold leading-snug mt-1 line-clamp-2">
+        <h3 className="text-lg font-semibold">
           {event.title}
         </h3>
 
-        <p className="mt-1 text-xs text-gray-300">
+        <p className="text-sm text-gray-300 mt-1">
           {event.location} • {event.time}
         </p>
 
-        <button
-          className={`mt-3 text-sm font-medium transition
-            ${
-              event.status === "soldout"
-                ? "text-gray-400 cursor-not-allowed"
-                : "text-pink-400 hover:text-pink-300"
-            }
-          `}
-          disabled={event.status === "soldout"}
-        >
-          {event.status === "soldout"
-            ? "Sold Out"
-            : "View Details →"}
-        </button>
+        <p className="text-xs text-gray-400 mt-2 line-clamp-1">
+          🎵 {event.artists?.join(" • ")}
+        </p>
+
+        <p className="mt-3 text-sm text-pink-400 font-medium">
+          View Event →
+        </p>
+
       </div>
 
-      {/* SOFT INNER RING (DEPTH) */}
-      <div
-        className="
-          pointer-events-none
-          absolute inset-0 rounded-xl
-          ring-1 ring-white/10
-          group-hover:ring-pink-500/40
-          transition
-        "
-      />
+      {/* PROGRESS LINE */}
+      <div className="
+      absolute bottom-0 left-0 h-[2px] w-0
+      bg-pink-500
+      group-hover:w-full
+      transition-all duration-500
+      "/>
     </motion.div>
   );
 }

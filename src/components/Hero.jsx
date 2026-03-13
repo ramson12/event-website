@@ -16,7 +16,8 @@ export default function Hero() {
         }}
       />
       <div className="absolute inset-0 bg-black/40" />
-
+  {/* OVERLAYS */}
+  <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/60 to-black" />
       {/* CONTENT */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}

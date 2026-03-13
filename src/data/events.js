@@ -1,11 +1,70 @@
+import londonPoster from "../assets/posters/fusionFest-London.png";
+import manchesterPoster from "../assets/posters/fusionFest-Manchester.png";
+import leicesterPoster from "../assets/posters/fusionFest-Leicester.png";
+import swindonPoster from "../assets/posters/fusionFest-Swindon.png";
 const events = [
+    {
+      id:1,
+      title: "FusionFest 2006 - Harrow",
+      location: "Byron Hall, Harrow",
+      date: "2026-07-12",
+      time: "7:00 PM",
+      category: "Music Festival",
+      image:londonPoster,
+      artists:["Tsumyoki","DJ Skeletron","Mark Revlon Band"]
+    },
+  
+    {
+      id:2,
+      title: "FusionFest 2006 - Manchester",
+      location: "Lighthouse, Manchester",
+      date: "2026-07-18",
+      time: "7:00 PM",
+      category: "Music Festival",
+      image:londonPoster,
+      artists:["Tsumyoki","DJ Skeletron","Mark Revlon Band"]
+    },
+  
+    {
+      id:3,
+      title: "FusionFest 2006 - Swindon",
+      location: "Venue 3, Swindon",
+      date: "2026-07-24",
+      time: "7:00 PM",
+      category: "Music Festival",
+      image:londonPoster,
+      artists:["Tsumyoki","DJ Skeletron","Mark Revlon Band"]
+    },
+  
+    {
+      id:4,
+      title: "FusionFest 2006 - Leicester",
+      location: "Ramgharia Hall, Leicester",
+      date: "2026-08-01",
+      time: "7:00 PM",
+      category: "Music Festival",
+      image:leicesterPoster,
+      artists:["Tsumyoki","DJ Skeletron","Mark Revlon Band"]
+    },
+  
+    {
+      id:5,
+      title: "FusionFest 2006 - Heathrow",
+      location: "Thistle T5 Hotel, Heathrow",
+      date: "2026-08-02",
+      time: "7:00 PM",
+      category: "Music Festival",
+      image:londonPoster,
+      artists:["Tsumyoki","DJ Skeletron","Mark Revlon Band"]
+    }
+/*
   {
     id: 1,
-    title: "Neon Pulse EDM Festival",
-    date: "2025-03-22",
-    time: "6:00 PM",
-    location: "Goa",
-    category: "EDM Festival",
+    title: "FusionFest 2006 - London",
+    date: "2026-08-08",
+    time: "7:00 PM",
+    location: "London, UK",
+    category: "Music Festival",
     image:
       "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2",
     artists: [
@@ -35,8 +94,8 @@ const events = [
       }
     ],
     description:
-      "A high-energy EDM festival featuring immersive lights, powerful sound systems, and top DJs.",
-    status: "few"
+      "FusionFest UK Tour opening night in London bringing Indian and global music together.",
+    status: "available"
   },
   
   {
@@ -196,7 +255,7 @@ const events = [
     description:
       "A nostalgic night celebrating classic Bollywood hits and timeless dance numbers.",
     status: "soldout"
-  }
+  }*/
 ];
 
 export default events;
