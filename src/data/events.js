@@ -47,15 +47,45 @@ const events = [
       artists:["Tsumyoki","DJ Skeletron","Mark Revlon Band"]
     },
   
+
     {
-      id:5,
-      title: "FusionFest 2006 - Heathrow",
-      location: "Thistle T5 Hotel, Heathrow",
-      date: "2026-01-02",
-      time: "7:00 PM",
+      id:6,
+      title: "Beatshow",
+      location: "Byron Hall, Harrow, London, HA3 5BD",
+      date: "27 July 2025",
+      time: "11am -8pm",
       category: "Music Festival",
       image:londonPoster,
-      artists:["Tsumyoki","DJ Skeletron","Mark Revlon Band"]
+      "eventAbout":"Beatshow was an unforgettable experience filled with energy, music, and culture. The night brought together diverse audiences, electrifying performances, and moments that will be remembered for years.",
+      "attendenceCount":"3000+",
+      "artistCount":"12+",
+      status: "soldout"
+    },
+    {
+      id:7,
+      title: "Beatshow After party",
+      location: "Byron Hall, Harrow, London, HA3 5BD",
+      date: "27 July 2025",
+      time: "9pm - 1am",
+      category: "Music Festival",
+      image:londonPoster,
+      "eventAbout":"Beatshow After party was an unforgettable experience filled with energy, music, and culture. The night brought together diverse audiences, electrifying performances, and moments that will be remembered for years.",
+      "attendenceCount":"1500+",
+      "artistCount":"7+",
+      status: "soldout"
+    },
+    {
+      id:8,
+      title: "Freedom Blast",
+      location: "Thistle Heathrow (Terminal 5), Uxbridge, UB7 0EQ",
+      date: "27 July 2025",
+      time: "9pm - 1am",
+      category: "Music Festival",
+      image:londonPoster,
+      "eventAbout":"Freedom Blast was an unforgettable experience filled with energy, music, and culture. The night brought together diverse audiences, electrifying performances, and moments that will be remembered for years.",
+      "attendenceCount":"1500+",
+      "artistCount":"7+",
+      status: "soldout"
     }
 /*
   {

@@ -29,29 +29,23 @@ export default function PastEventDetails() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
-  /* 🔥 Keyboard Navigation */
+  /* KEYBOARD NAV */
   useEffect(() => {
     const handleKey = (e) => {
       if (lightboxIndex === null) return;
-
       if (e.key === "Escape") closeLightbox();
       if (e.key === "ArrowRight") nextImage();
       if (e.key === "ArrowLeft") prevImage();
     };
-
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
   }, [lightboxIndex]);
 
   if (!event) {
-    return (
-      <div className="text-white text-center py-20">
-        Event not found
-      </div>
-    );
+    return <div className="text-white text-center py-20">Event not found</div>;
   }
 
-  /* 🔥 Animated Stat */
+  /* ANIMATED STAT */
   const Stat = ({ value, label }) => {
     const [count, setCount] = useState(0);
 
@@ -87,7 +81,7 @@ export default function PastEventDetails() {
   };
 
   return (
-    <section className="bg-black text-white overflow-hidden">
+    <section className="bg-black text-white">
 
       {/* HERO */}
       <section className="relative h-[85vh] flex items-center justify-center text-center overflow-hidden">
@@ -95,7 +89,6 @@ export default function PastEventDetails() {
         <img
           src={event.image}
           className="absolute inset-0 w-full h-full object-cover scale-110"
-          alt={event.title}
         />
 
         <div className="absolute inset-0 bg-black/70" />
@@ -111,15 +104,22 @@ export default function PastEventDetails() {
             {event.location} • {event.date}
           </p>
 
+          {event.status === "soldout" && (
+            <div className="mt-6 inline-block px-6 py-2 rounded-full bg-pink-500/20 border border-pink-500/40 text-pink-400 text-sm tracking-wide uppercase">
+                🎟️ Sold Out
+            </div>
+            )}
+
           <p className="mt-6 text-pink-400 text-lg">
             A Night To Remember ✨
           </p>
 
           {/* STATS */}
           <div className="flex justify-center gap-10 mt-10 flex-wrap">
-            <Stat value="5000" label="People Attended" />
-            <Stat value="12" label="Artists" />
-            <Stat value="4" label="Cities" />
+
+            <Stat value={event.attendenceCount || "4500"} label="People Attended" />
+            <Stat value={event.artistCount || "15"} label="Artists" />
+
           </div>
 
         </div>
@@ -139,9 +139,7 @@ export default function PastEventDetails() {
         </motion.h2>
 
         <p className="text-gray-400 leading-relaxed">
-          FusionFest delivered an unforgettable experience filled with energy,
-          music, and culture. The night brought together diverse audiences,
-          electrifying performances, and moments that will be remembered for years.
+          {event.eventAbout}
         </p>
 
       </section>
@@ -167,7 +165,7 @@ export default function PastEventDetails() {
 
               <img
                 src={img}
-                className="w-full object-cover transition duration-500 group-hover:scale-110"
+                className="w-full object-cover group-hover:scale-110 transition"
                 style={{
                   height:
                     i % 3 === 0 ? "260px" :
@@ -175,15 +173,11 @@ export default function PastEventDetails() {
                 }}
               />
 
-              {/* OVERLAY */}
               <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-end p-4">
                 <p className="text-sm text-white">
                   FusionFest Moments
                 </p>
               </div>
-
-              {/* GLOW */}
-              <div className="absolute inset-0 rounded-xl border border-transparent group-hover:border-pink-500/40 group-hover:shadow-[0_0_20px_rgba(236,72,153,0.3)] transition" />
 
             </motion.div>
 
@@ -194,7 +188,7 @@ export default function PastEventDetails() {
       </section>
 
 
-      {/* 🔥 LIGHTBOX */}
+      {/* LIGHTBOX */}
       <AnimatePresence>
         {lightboxIndex !== null && (
           <motion.div
@@ -204,41 +198,20 @@ export default function PastEventDetails() {
             className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center"
           >
 
-            {/* CLOSE */}
-            <button
-              onClick={closeLightbox}
-              className="absolute top-6 right-6 text-white text-3xl"
-            >
-              ✕
-            </button>
+            <button onClick={closeLightbox} className="absolute top-6 right-6 text-3xl">✕</button>
+            <button onClick={prevImage} className="absolute left-6 text-4xl">‹</button>
 
-            {/* PREV */}
-            <button
-              onClick={prevImage}
-              className="absolute left-6 text-white text-4xl"
-            >
-              ‹
-            </button>
-
-            {/* IMAGE */}
             <motion.img
               key={lightboxIndex}
               src={gallery[lightboxIndex]}
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
-              className="max-h-[85vh] max-w-[90vw] object-contain rounded-xl"
+              className="max-h-[85vh] max-w-[90vw] rounded-xl"
             />
 
-            {/* NEXT */}
-            <button
-              onClick={nextImage}
-              className="absolute right-6 text-white text-4xl"
-            >
-              ›
-            </button>
+            <button onClick={nextImage} className="absolute right-6 text-4xl">›</button>
 
-            {/* COUNTER */}
-            <div className="absolute bottom-6 text-gray-300 text-sm">
+            <div className="absolute bottom-6 text-sm text-gray-300">
               {lightboxIndex + 1} / {gallery.length}
             </div>
 
