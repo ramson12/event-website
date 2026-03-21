@@ -51,7 +51,7 @@ const events = [
       id:5,
       title: "FusionFest 2006 - Heathrow",
       location: "Thistle T5 Hotel, Heathrow",
-      date: "2026-08-02",
+      date: "2026-01-02",
       time: "7:00 PM",
       category: "Music Festival",
       image:londonPoster,

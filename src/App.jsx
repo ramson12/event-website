@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import EventsSection from "./components/Events/EventsSection";
 import EventDetails from "./components/Events/EventDetails";
+import PastEventDetails from "./components/Events/PastEventDetails";
 import Services from "./components/Services";
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -38,6 +39,8 @@ export default function App() {
           path="/events/:id"
           element={<EventDetails />}
         />
+
+<Route path="/past-events/:id" element={<PastEventDetails />} />
 
       </Routes>
 

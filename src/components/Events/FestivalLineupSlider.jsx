@@ -13,6 +13,7 @@ export default function FestivalLineupSlider() {
   const next = () => setIndex((index + 1) % artists.length);
   const prev = () => setIndex((index - 1 + artists.length) % artists.length);
 
+  
   // Reset accordion when artist changes
   useEffect(() => {
     setOpenSection("bio");
@@ -92,24 +93,47 @@ export default function FestivalLineupSlider() {
 
             {/* ARTIST INFO */}
             <h3 className="text-xl font-semibold mb-4">
-              🎧 {artist.name}
+              {artist.name}
             </h3>
 
             <p className="text-gray-400 text-sm">Genre: {artist.genre}</p>
             <p className="text-gray-400 text-sm">Origin: {artist.origin}</p>
-            <p className="text-gray-400 text-sm mb-6">
-              Instagram: @{artist.instagram}
+            <p className="text-gray-400 text-sm">
+              Instagram:{" "}
+              <a
+                href={`https://instagram.com/${artist.instagram}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-pink-400"
+              >
+                @{artist.instagram}
+              </a>
             </p>
 
+            <p className="text-gray-400 text-sm">
+              YouTube:{" "}
+              <a
+                href={`https://youtube.com/@${artist.youtube}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-red-400"
+              >
+                @{artist.youtube}
+              </a>
+            </p>
+
+            <p className="text-gray-400 text-sm mb-6">
+              Lead Singer: {artist.leadSinger}
+            </p>
             {/* ACCORDION */}
-            <div className="space-y-4">
+            <div className="space-y-6 w-full max-w-lg">
 
               <AccordionItem
                 title="Bio & Contributions"
                 isOpen={openSection === "bio"}
                 onClick={() => setOpenSection("bio")}
               >
-                <p className="whitespace-pre-line">
+                <p className="whitespace-pre-line" >
                   {artist.bio}
                 </p>
               </AccordionItem>
@@ -124,6 +148,7 @@ export default function FestivalLineupSlider() {
                 </p>
               </AccordionItem>
 
+{/*
               <AccordionItem
                 title="Cultural Impact"
                 isOpen={openSection === "impact"}
@@ -133,6 +158,7 @@ export default function FestivalLineupSlider() {
                   {artist.impact}
                 </p>
               </AccordionItem>
+              */}
 
             </div>
 

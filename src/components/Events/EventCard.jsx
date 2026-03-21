@@ -7,12 +7,23 @@ export default function EventCard({ event }) {
   const eventDate = new Date(event.date);
   const day = eventDate.getDate();
   const month = eventDate.toLocaleString("default", { month: "short" });
+  const today = new Date();
+  const isPast = eventDate < today;
+
+  const handleClick = () => {
+    if (isPast) {
+      navigate(`/past-events/${event.id}`);
+    } else {
+      navigate(`/events/${event.id}`);
+    }
+  };
+
 
   return (
     <motion.div
       whileHover={{ y: -8 }}
       transition={{ duration: 0.25 }}
-      onClick={() => navigate(`/events/${event.id}`)}
+      onClick={handleClick}
       className="
       group relative
       h-[360px]
