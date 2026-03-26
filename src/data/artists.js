@@ -7,7 +7,7 @@ import DJN2NE from "../assets/festival/artist/DJN2NE.png";
 import FLACID from "../assets/festival/artist/FLACID.jpeg";
 import Bunty from "../assets/festival/artist/Bunty.jpeg";
 import Enrico from "../assets/festival/artist/Enrico.jpeg";
-import BKS from "../assets/festival/artist/best1.jpg";
+import BKS from "../assets/festival/artist/best1.JPG";
 import host1 from "../assets/festival/artist/mc1.jpeg";
 import host2 from "../assets/festival/artist/host2.JPG";
 
