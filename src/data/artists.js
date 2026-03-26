@@ -1,151 +1,166 @@
 import skeletronProfile from "../assets/festival/artist/skeletron.jpg";
 import TSUMYOKI from "../assets/festival/artist/TSUMYOKI.jpg";
-import markR from "../assets/festival/artist/markR.png";
-import djDona from "../assets/festival/artist/djDona.jpg";
-import djc from "../assets/festival/artist/djc.png";
+import markR from "../assets/festival/artist/merkrevlon.jpeg";
+import djDona from "../assets/festival/artist/donna.jpg";
+import djc from "../assets/festival/artist/djc.jpeg";
 import DJN2NE from "../assets/festival/artist/DJN2NE.png";
 import FLACID from "../assets/festival/artist/FLACID.jpeg";
 import Bunty from "../assets/festival/artist/Bunty.jpeg";
 import Enrico from "../assets/festival/artist/Enrico.jpeg";
-import BKS from "../assets/festival/artist/BKS.jpeg";
+import BKS from "../assets/festival/artist/best1.jpg";
+import host1 from "../assets/festival/artist/mc1.jpeg";
+import host2 from "../assets/festival/artist/host2.JPG";
 
 const artists = [
   {
-    "name": "TSUMYOKI",
+    "name": "Tsumyoki",
     "genre": "Hip-Hop | Indie Rap",
     "origin": "Goa, India",
     "instagram": "tsumyoki",
     "youtube":"tsumyoki",
     "leadSinger":"none",
     "image": TSUMYOKI,
-    "bio": "Tsumyoki (Nathan Joseph Mendes) is an Indian rapper, singer-songwriter, and producer from Goa. He's known for being one of the leading artists pushing English-language hip-hop and alternative pop in India, especially among Gen Z listeners.\n\nAt the age of 19, he became the first Goan artist signed to Gully Gang Records, founded by Indian rap icon Divine.\n\nHe is also a founding member of Goa Trap Culture (GTC), a creative collective blending rap, pop, indie, rock, and trap, contributing to a new sonic identity for modern Goan music.\n\nHe has contributed rap verses to Bollywood film projects, including works associated with films like 'Dhurandhar' and 'War 2'.\n\nHis deluxe album 'A Message From The Moon' features collaborations with prominent Indian artists like Calm and Yashraj, along with international names.\n\n**Musical Style**\n• English-language rap with melodic pop hooks\n• Influences from trap, indie pop, and alternative music\n\n**Popular Tracks**\n• Sometimes You Don't Even Text\n• Pink Blue\n• Funkey Monkey\n• Perfect Life\n\n**Film & Collaborations**\n• Dhurandhar\n• War 2",
-    "awards": "🏆 MTV Europe Music Awards – Best Indian Local Act (2023)\n\n🏆 Youngest and first Goan artist signed to Gully Gang Records at the age of 19\n\n🏆 Named among Goan Insider’s “50 Most Influential People” (2021).",
+    "bio": "Tsumyoki (Nathan Joseph Mendes) is an Indian rapper, pop singer-songwriter and producer from Goa/Mumbai, pushing English-language hip-hop and alternative pop in India, particularly among Gen Z.\n\nHe became the first Goan artist signed to Divine’s Gully Gang Records at 19 and co-founded Goa Trap Culture, which blends rap, pop, indie, rock and trap. His style combines English language rap, melodic pop hooks, and influences from trap, indie pop and alternative music, with popular tracks such as “Sometimes You Don’t Even Text”, “Pink Blue”, “Funkey Monkey” and “Perfect Life”. He has contributed rap verses to Bollywood films including projects like Dhurandhar and War 2.",
+    "awards": "🏆 MTV Europe Music Awards – Best Indian Local Act (2023).\n🏆 Youngest and first Goan artist signed to Gully Gang Records at the age of 19.\n🏆 Named among Goan Insider’s “50 Most Influential People” (2021).",
     "impact": "Tsumyoki’s music has contributed to making Goa a recognised name in the indie and hip-hop community, inspiring a generation of young artists and expanding the boundaries of regional music into mainstream hip-hop. His work reflects a Bollywood-influenced hip-hop context where Indian youth music intersects with cinema culture — especially since hip-hop in India is now widely linked to films and mainstream pop culture."
   },
   {
-    "name": "DJ Skeletron",
-    "genre": "EDM | House | Electronic",
-    "origin": "Goa, India",
-    "instagram": "skeletron_music",
-    "youtube":"SkeletronMusic",
-    "leadSinger":"none",
-    "image": skeletronProfile,
-    "bio": "DJ Skeletron (Allan D’souza) is an electronic DJ and music producer based in Goa, India, known for delivering high-energy club and festival performances. His sound blends modern EDM and house with global electronic influences, creating sets that resonate with both international audiences and India’s vibrant nightlife scene.\n\nHe gained wider recognition for his remix of the Bollywood tracks “Hai Jamalo” from the film Munjya and “Gehraiyaan” from the film Gehraiyaan, which was officially signed and released by Sony Music India.\n\nA defining element of DJ Skeletron’s performances is his Bollywood-themed electronic sets, where he fuses classic and contemporary Bollywood hits with EDM, house, and tribal tech elements.\n\nAlongside his remixes, Skeletron has also produced several regional hits, including “Run Around Town,” “Nach Re,” “Fuloi Re Fuloi Go,” and “Ringa Ringa,” among others.",
-    "impact": "Skeletron’s Bollywood remix work and live sets have helped merge mainstream Indian cinema music with EDM and festival culture — a style that has become increasingly popular in nightlife and festival spaces and expands Bollywood’s influence into electronic music realms."
-  },
-  {
-    "name": "MARK REVLON BAND",
-    "genre": "Goan Fusion | World | Contemporary",
-    "origin": "Goa, India",
-    "instagram": "markrevlon",
-    "youtube":"markrevlon10",
-    "leadSinger":"none",
-    "image": markR,
-    "bio": "Led by Mark Revlon Fernandes, the Mark Revlon Band is one of Goa’s most iconic and influential musical groups. A self-taught musician, Revlon has built a distinctive legacy rooted in authentic Goan culture, multilingual songwriting, and powerful live performances that resonate with audiences worldwide.\n\nThe band has performed internationally across major global destinations including the United Kingdom, United States, Australia, United Arab Emirates, and Europe, bringing Goan fusion music to diverse audiences.\n\nKnown for popular original songs such as “Argham Tuka Somia,” Dis Udelo” and “Rise as One Goa,” which celebrate Goan identity, unity, and pride.",
-    "impact": "Mark’s work champions Goan music and Konkani culture on global stages, broadening the reach of regional sounds while demonstrating powerful vocal and rhythmic mastery.",
-    "awards": ""
-  },
-  {
-    "name": "DJ Dona",
-    "genre": "Bollywood | Hip-Hop | Club",
-    "origin": "Kolkata/Mumbai, India",
-    "instagram": "dj_donna_official",
-    "youtube":"deejaydonnaa",
-    "leadSinger":"none",
-    "image": djDona,
-    "bio": "DJ Donna (Prerona Chatterjee) is celebrity female DJ and producer known for her high-energy sets that blend hip-hop, club music, and global electronic influences. Her dynamic performances create an electrifying atmosphere that connects strongly with young, diverse festival audiences.\n\nShe has done remixes for SaReGaMa & Eros Now. With seamless mixing, bold track selections, and a vibrant stage presence, DJ Dona consistently delivers unforgettable dancefloor experiences. As her audience continues to grow across social platforms and live events, she is quickly building a reputation as an exciting rising name on the international club and festival circuit.",
-    "awards": "",
-    "impact": "As part of the UK's thriving DJ scene, DJ Dona contributes to the cultural dialogue between electronic and mainstream music while pushing boundaries in live events and nightlife."
-  },
-  {
-    "name": "DJ CURLY M",
-    "genre": "Bollywood | Electronic | Dance | Club",
-    "origin": "Goa, India",
-    "instagram": "dj_curlym_goa",
-    "youtube":"djcurlymgoa",
-    "leadSinger":"none",
-    "image": djc,
-    "bio": "DJ Curly M is a dynamic force in the Goa nightlife scene, celebrated for her high-energy sets that seamlessly blend upbeat rhythms, electronic grooves, and dancefloor anthems. A staple at local clubs and festivals, she brings the spirit of Goa’s vibrant electronic music culture to life, creating immersive experiences that keep crowds moving all night.\n\nNotably, DJ Curly M is the youngest female DJ to perform at Sunburn Festival, Asia’s premier EDM festival, and has shared her electrifying sound across stages around the world. Her performances are a testament to her passion, skill, and ability to connect with audiences through music.",
-    "awards": "",
-    "impact": "As a performer representing Goan club culture, DJ Curly M supports the fusion of traditional party vibes with modern electronic music."
-  },
-  
-  {
-    "name": "DJ N2NE",
-    "genre": "Urban | Electronic | Club",
-    "origin": "Leicester, United Kingdom",
-    "instagram": "djn2ne.official",
-    "youtube":"djn2ne",
-    "leadSinger":"none",
-    "image": DJN2NE,
-    "bio": "DJ N2NE (Antonio Rosario) combines urban beats with electronic styles in his versatile DJ sets. Active in UK music circles, he engages youthful and urban crowds, enhancing festival lineups with dynamic mixes.",
-    "awards": "",
-    "impact": "His work reflects the UK’s diverse musical landscape and interconnectivity with global electronic genres."
-  },
-  
-  {
-    "name": "DJ FLACID",
-    "genre": "Electronic | Club | Party Mix",
-    "origin": "London, United Kingdom",
-    "instagram": "_djflacid",
-    "youtube":"djflacid7413",
-    "leadSinger":"none",
-    "image": FLACID,
-    "bio": "DJ Flacid  (Flacid Mendes) is a UK-based DJ celebrated for his high-energy club sets that seamlessly traverse multiple genres. Known for blending infectious party rhythms with precise technical mixing, he elevates festival stages and nightlife events alike, keeping crowds engaged and the dance floor alive.",
-    "awards": "",
-    "impact": "Active on the UK scene, DJ Flacid helps sustain vibrant electronic music culture in regional live events."
-  },
-  
-  {
-    "name": "BUNTY VAS",
-    "genre": "Host | MC",
-    "origin": "London United Kingdom",
-    "instagram": "energetichostbuntyvas",
-    "youtube":"Youtube link",
-    "leadSinger":"none",
-    "image": Bunty,
-    "bio": "Bunty VAS (Guendolen Adolfo Vas) is a charismatic host and MC celebrated for his ability to keep live events dynamic and engaging. He connects effortlessly with audiences, maintains high energy throughout performances, and ensures every event feels lively and memorable.",
-    "awards": "",
-    "impact": "Hosts like Bunty play a crucial role in crafting memorable experiences and supporting artist showcases."
-  },
-  
-  {
-    "name": "EDMAR 'ECHENDRIX'",
-    "genre": "Host | MC",
-    "origin": "Goa, India",
-    "instagram": "echendrix",
-    "youtube":"EdmarCamaraHendricks",
-    "leadSinger":"none",
-    "image": "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2",
-    "bio": "Edmar Camara Hendricks, professionally known as Echendrix, is a seasoned MC and live event host celebrated for his commanding stage presence and innate ability to energize multicultural audiences. Rooted in Goa’s vibrant music and nightlife scene, he has established himself as a trusted figure in the electronic dance music community, expertly maintaining momentum, engaging crowds, and facilitating smooth transitions between artists.",
-    "awards": "",
-    "impact": "Echendrix represents the modern MC — a cultural connector who enhances live experiences by uniting artists and audiences, ensuring festivals feel immersive, inclusive and high-energy."
-  },
-  
-  {
-    "name": "DJ ENRICO FERNANDES",
-    "genre": "Electronic | House | Club | Dance",
-    "origin": "London United Kingdom",
-    "instagram": "music.by.enrico",
-    "youtube":"music.by.enrico",
-    "leadSinger":"none",
-    "image": Enrico,
-    "bio": "DJ Enrico (Enrico Fernandes) is a dynamic and rising DJ and music curator known for his engaging mixes and ability to fuel dance floors with high-energy selections. With a sound that blends electronic house, club rhythms and contemporary dance influences, Enrico has built a reputation within London’s vibrant nightlife and festival circuits. He prioritises crowd energy, seamless transitions and genre versatility — making each performance a memorable experience.",
-    "awards": "",
-    "impact": "As an emerging DJ shaping his own sound within Goa’s music community, DJ Enrico Fernandes contributes to the cultural bridge between traditional party spaces and modern festival formats, blending local identity with global electronic music trends."
-  },
-  
-  {
-    "name": "BEST KEPT SECRET BAND",
+    "name": "Best Kept Secret Band",
     "genre": "Indian Fusion | Electro-Pop | Live Band",
     "origin": "Bangalore, India",
     "instagram": "bestkeptsecretband",
     "youtube":"BestKeptSecretBand",
     "leadSinger":"Behram Siganporia",
     "image": BKS,
-    "bio": "Best Kept Secret is one of India's most dynamic and widely recognised live music acts, known for electrifying performances that blend Indian fusion with pop, rock, and disco influences.\n\nFormed in Bangalore, the band has delivered hundreds of performances across India and internationally, earning a reputation for a polished, high-energy live experience that resonates with audiences of all ages.\n\nBest Kept Secret has cultivated a loyal fanbase by seamlessly blending crowd-favourite covers with original music, including standout tracks such as “Can't Let You Go” and “Moving On.”\n\nTheir versatility, engaging stage presence, and ability to connect with diverse audiences have made them a sought-after act for luxury weddings, corporate events, music festivals, and fashion shows.",
-    "awards": "🏆 Best Live Artist — INCA Awards (2018)\nRecognised for outstanding live performance energy and exceptional crowd engagement. \n\n🏆 Best Band — Live Quotient Awards (2019)\nCelebrated among the top bands in the weddings and corporate lifestyle events industry.\n\n🏆 Wow Award — Best Band (2020,2024,2025)\nHonoured for excellence in live music performance and event entertainment.\n\n🏆 WeddingSutra Award — Best Live Act (2021,2022,2024,2025)\nRecognised for performance versatility and excellence in premium wedding events.\n\n🏆 Live Quotient Awards (2024 & 2025) — Best Band categories\nAwarded Gold and Bronze distinctions in Best Band categories for weddings, corporate, and lifestyle events — reaffirming the band's continued prominence and industry recognition.",
+    "bio": "Best Kept Secret is a Bangalore-based live band known for high-energy performances blending Indian fusion with pop rock and disco, performing hundreds of shows across India and internationally. They mix crowd‑favourite covers with originals such as “Can’t Let You Go” and “Moving On”, appealing to audiences of all ages and across luxury weddings, corporate events, festivals and fashion shows.",
+    "awards": "🏆 Best live band -WOW Awards (2020, 2024, 2025)\n🏆 Best Live Act - Wedding Sutra (2021, 2022, 2024, 2025)\n🏆 Best Live Artist – INCA Awards 2018\n🏆 Best Band – Live Quotient Awards 2019\n🏆 Gold and Bronze in band categories - Live Quotient Awards (2024 & 2025)",
     "impact": "Best Kept Secret has played a significant role in elevating India’s contemporary live band culture. Their fusion of international sounds with Indian musical sensibilities helped expand audience tastes beyond mainstream film music into global pop and rock genres."
+  },
+  {
+    "name": "Mark Revlon Band",
+    "genre": "Goan Fusion | World | Contemporary",
+    "origin": "Goa, India",
+    "instagram": "markrevlon",
+    "youtube":"markrevlon10",
+    "leadSinger":"none",
+    "image": markR,
+    "bio": "Led by Mark Revlon Fernandes from Goa, performing Goan fusion, world and contemporary music, with international tours (UK, USA, Australia, UAE, Europe) and originals like “Argham Tuka Somia”, “Dis Udelo” and “Rise as One Goa” celebrating Goan identity and unity.",
+    "impact": "Mark’s work champions Goan music and Konkani culture on global stages, broadening the reach of regional sounds while demonstrating powerful vocal and rhythmic mastery.",
+    "awards": ""
+  },
+  {
+    "name": "DJ Skeletron (Allan D’souza)",
+    "genre": "EDM | House | Electronic",
+    "origin": "Goa, India",
+    "instagram": "skeletron_music",
+    "youtube":"SkeletronMusic",
+    "leadSinger":"none",
+    "image": skeletronProfile,
+    "bio": "Goa-based EDM/house/electronic/Bollywood DJ and producer with Bollywood-themed electronic sets, known for remixes like “Hai Jamalo” (Munjya) and “Gehraiyaan” (Gehraiyaan) released by Sony Music India, and original tracks such as “Run Around Town”, “Nach Re”, “Fuloi Re Fuloi Go” and “Ringa Ringa”.",
+    "impact": "Skeletron’s Bollywood remix work and live sets have helped merge mainstream Indian cinema music with EDM and festival culture — a style that has become increasingly popular in nightlife and festival spaces and expands Bollywood’s influence into electronic music realms."
+  },
+  {
+    "name": "DJ Donna (Prerona Chatterjee)",
+    "genre": "Bollywood | Hip-Hop | Club",
+    "origin": "Kolkata/Mumbai, India",
+    "instagram": "dj_donna_official",
+    "youtube":"deejaydonnaa",
+    "leadSinger":"none",
+    "image": djDona,
+    "bio": "Kolkata/Mumbai-based celebrity DJ, playing Bollywood, hip-hop and club music; delivers high-energy sets, has remixed for SaReGaMa and Eros Now, and is growing as a rising international club and festival name.",
+    "awards": "",
+    "impact": "As part of the UK's thriving DJ scene, DJ Dona contributes to the cultural dialogue between electronic and mainstream music while pushing boundaries in live events and nightlife."
+  },
+  {
+    "name": "DJ Curly M (Mazel Fernandes)",
+    "genre": "Bollywood | Electronic | Dance | Club",
+    "origin": "Goa, India",
+    "instagram": "dj_curlym_goa",
+    "youtube":"djcurlymgoa",
+    "leadSinger":"none",
+    "image": djc,
+    "bio": "Goa-based DJ known for Bollywood, electronic, dance and club sets, youngest female DJ to perform at Sunburn Festival and active at festivals and clubs worldwide.",
+    "awards": "",
+    "impact": "As a performer representing Goan club culture, DJ Curly M supports the fusion of traditional party vibes with modern electronic music."
+  },
+  
+  {
+    "name": "DJ Flacid (Flacid Mendes)",
+    "genre": "Electronic | Club | Party Mix",
+    "origin": "London, United Kingdom",
+    "instagram": "_djflacid",
+    "youtube":"djflacid7413",
+    "leadSinger":"none",
+    "image": FLACID,
+    "bio": "London‑based DJ with electronic/club/party‑mix sets, known for high‑energy, multi‑genre club performances.",
+    "awards": "",
+    "impact": "Active on the UK scene, DJ Flacid helps sustain vibrant electronic music culture in regional live events."
+  },
+
+  {
+    "name": "DJ N2NE (Antonio Rosario) ",
+    "genre": "Urban | Electronic | Club",
+    "origin": "Leicester, United Kingdom",
+    "instagram": "djn2ne.official",
+    "youtube":"djn2ne",
+    "leadSinger":"none",
+    "image": DJN2NE,
+    "bio": "Leicester‑based DJ blending urban and electronic club styles, engaging youth‑driven, urban UK crowds.",
+    "awards": "",
+    "impact": "His work reflects the UK’s diverse musical landscape and interconnectivity with global electronic genres."
+  },
+  
+    
+  {
+    "name": "DJ Enrico (Enrico Fernandes) ",
+    "genre": "Electronic | House | Club | Dance",
+    "origin": "London United Kingdom",
+    "instagram": "music.by.enrico",
+    "youtube":"music.by.enrico",
+    "leadSinger":"none",
+    "image": Enrico,
+    "bio": "London‑based DJ focusing on electronic, Bollywood, house, club and dance, recognised for high‑energy, versatile sets and strong crowd connection in London nightlife and festivals. ",
+    "awards": "",
+    "impact": "As an emerging DJ shaping his own sound within Goa’s music community, DJ Enrico Fernandes contributes to the cultural bridge between traditional party spaces and modern festival formats, blending local identity with global electronic music trends."
+  },
+
+  {
+    "name": "Tahlia Rowena Coutinho",
+    "genre": "Host | MC",
+    "origin": "London United Kingdom",
+    "instagram": "energetichostbuntyvas",
+    "youtube":"Youtube link",
+    "leadSinger":"none",
+    "image": host1,
+    "bio": "London-based presenter and model with international experience hosting festivals and live events. Tahlia has collaborated with leading global brands and is highly confident both on screen and in front of live audiences, bringing energy, professionalism, and a natural ability to connect with people.",
+    "awards": "",
+    "impact": "Hosts like Bunty play a crucial role in crafting memorable experiences and supporting artist showcases."
+  },
+
+  {
+    "name": "Edmar Camara Hendricks",
+    "genre": "Host | MC",
+    "origin": "Goa, India",
+    "instagram": "echendrix",
+    "youtube":"EdmarCamaraHendricks",
+    "leadSinger":"none",
+    "image": Bunty,
+    "bio": "Goa‑based MC known for strong stage presence in electronic dance music events, expert at energising multicultural audiences and managing transitions between artists. ",
+    "awards": "",
+    "impact": "Echendrix represents the modern MC — a cultural connector who enhances live experiences by uniting artists and audiences, ensuring festivals feel immersive, inclusive and high-energy."
+  },
+
+  {
+    "name": "Guendolen Adolfo Vas  ",
+    "genre": "Host | MC",
+    "origin": "London United Kingdom",
+    "instagram": "energetichostbuntyvas",
+    "youtube":"Youtube link",
+    "leadSinger":"none",
+    "image": Bunty,
+    "bio": "London‑based charismatic host who keeps events dynamic, maintains high energy and ensures memorable festival experiences.",
+    "awards": "",
+    "impact": "Hosts like Bunty play a crucial role in crafting memorable experiences and supporting artist showcases."
   }
   ];
   

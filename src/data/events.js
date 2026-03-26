@@ -1,14 +1,17 @@
 import londonPoster from "../assets/posters/fusionFest-London.png";
 import manchesterPoster from "../assets/posters/fusionFest-Manchester.png";
 import leicesterPoster from "../assets/posters/fusionFest-Leicester.png";
-import pastp from "../assets/posters/fusionFest-Leicester.png";
+import pastp from "../assets/posters/p1.jpeg";
+import past2 from "../assets/posters/P2.jpeg";
+import past3 from "../assets/posters/P3.jpeg";
+
 const events = [
     {
       id:1,
       title: "FusionFest 2006 - North London",
       location: "Byron Hall, Harrow",
       date: "2026-07-12",
-      time: "7:00 PM",
+      time: "2:00 PM to 11:30 PM",
       category: "Music Festival",
       image:londonPoster,
       artists:["Tsumyoki","DJ Skeletron","Mark Revlon Band"]
@@ -19,7 +22,7 @@ const events = [
       title: "FusionFest 2006 - Manchester",
       location: "Lighthouse, Manchester",
       date: "2026-07-18",
-      time: "7:00 PM",
+      time: "2:00 PM to 11:30 PM",
       category: "Music Festival",
       image:londonPoster,
       artists:["Tsumyoki","DJ Skeletron","Mark Revlon Band"]
@@ -30,7 +33,7 @@ const events = [
       title: "FusionFest 2006 - Swindon",
       location: "Venue 3, Swindon",
       date: "2026-07-24",
-      time: "7:00 PM",
+      time: "7:00 PM to 3:00 AM",
       category: "Music Festival",
       image:londonPoster,
       artists:["Tsumyoki","DJ Skeletron","Mark Revlon Band"]
@@ -41,7 +44,7 @@ const events = [
       title: "FusionFest 2006 - Leicester",
       location: "Ramgharia Hall, Leicester",
       date: "2026-08-01",
-      time: "7:00 PM",
+      time: "7:00 PM to 3:00 AM",
       category: "Music Festival",
       image:leicesterPoster,
       artists:["Tsumyoki","DJ Skeletron","Mark Revlon Band"]
@@ -52,7 +55,7 @@ const events = [
       title: "FusionFest 2006 - West London",
       location: "West London",
       date: "2026-08-02",
-      time: "7:00 PM",
+      time: "2:00 PM to 11:00 PM",
       category: "Music Festival",
       image:leicesterPoster,
       artists:["Tsumyoki","DJ Skeletron","Mark Revlon Band"]
@@ -60,10 +63,10 @@ const events = [
 
     {
       id:6,
-      title: "FusionFest 2006 - West London",
+      title: "Batshow",
       location: "Byron Hall, Harrow, London, HA3 5BD",
       date: "27 July 2025",
-      time: "11am -8pm",
+      time: "11:00 AM - 08:00 PM",
       category: "Music Festival",
       image:pastp,
       "eventAbout":"Beatshow was an unforgettable experience filled with energy, music, and culture. The night brought together diverse audiences, electrifying performances, and moments that will be remembered for years.",
@@ -76,9 +79,9 @@ const events = [
       title: "Beatshow After party",
       location: "Byron Hall, Harrow, London, HA3 5BD",
       date: "27 July 2025",
-      time: "9pm - 1am",
+      time: "09:00 PM - 01:00 AM",
       category: "Music Festival",
-      image:londonPoster,
+      image:past2,
       "eventAbout":"Beatshow After party was an unforgettable experience filled with energy, music, and culture. The night brought together diverse audiences, electrifying performances, and moments that will be remembered for years.",
       "attendenceCount":"1500+",
       "artistCount":"7+",
@@ -89,9 +92,9 @@ const events = [
       title: "Freedom Blast",
       location: "Thistle Heathrow (Terminal 5), Uxbridge, UB7 0EQ",
       date: "27 July 2025",
-      time: "9pm - 1am",
+      time: "09:00 PM - 01:00 AM",
       category: "Music Festival",
-      image:londonPoster,
+      image:past3,
       "eventAbout":"Freedom Blast was an unforgettable experience filled with energy, music, and culture. The night brought together diverse audiences, electrifying performances, and moments that will be remembered for years.",
       "attendenceCount":"1500+",
       "artistCount":"7+",
