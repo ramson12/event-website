@@ -1,5 +1,5 @@
 import skeletronProfile from "../assets/festival/artist/skeletron.jpg";
-import TSUMYOKI from "../assets/festival/artist/tum.png";
+import TSUMYOKI from "../assets/festival/artist/TSUMYOKI.jpg";
 import markR from "../assets/festival/artist/markR.png";
 import djDona from "../assets/festival/artist/djDona.jpg";
 import djc from "../assets/festival/artist/djc.png";
@@ -11,17 +11,6 @@ import BKS from "../assets/festival/artist/BKS.jpeg";
 
 const artists = [
   {
-    "name": "DJ Skeletron",
-    "genre": "EDM | House | Electronic",
-    "origin": "Goa, India",
-    "instagram": "skeletron_music",
-    "youtube":"SkeletronMusic",
-    "leadSinger":"none",
-    "image": skeletronProfile,
-    "bio": "DJ Skeletron (Allan D’souza) is an electronic DJ and music producer based in Goa, India, known for delivering high-energy club and festival performances. His sound blends modern EDM and house with global electronic influences, creating sets that resonate with both international audiences and India’s vibrant nightlife scene.\n\nHe gained wider recognition for his remix of the Bollywood tracks “Hai Jamalo” from the film Munjya and “Gehraiyaan” from the film Gehraiyaan, which was officially signed and released by Sony Music India.\n\nA defining element of DJ Skeletron’s performances is his Bollywood-themed electronic sets, where he fuses classic and contemporary Bollywood hits with EDM, house, and tribal tech elements.\n\nAlongside his remixes, Skeletron has also produced several regional hits, including “Run Around Town,” “Nach Re,” “Fuloi Re Fuloi Go,” and “Ringa Ringa,” among others.",
-    "impact": "Skeletron’s Bollywood remix work and live sets have helped merge mainstream Indian cinema music with EDM and festival culture — a style that has become increasingly popular in nightlife and festival spaces and expands Bollywood’s influence into electronic music realms."
-  },
-  {
     "name": "TSUMYOKI",
     "genre": "Hip-Hop | Indie Rap",
     "origin": "Goa, India",
@@ -32,6 +21,17 @@ const artists = [
     "bio": "Tsumyoki (Nathan Joseph Mendes) is an Indian rapper, singer-songwriter, and producer from Goa. He's known for being one of the leading artists pushing English-language hip-hop and alternative pop in India, especially among Gen Z listeners.\n\nAt the age of 19, he became the first Goan artist signed to Gully Gang Records, founded by Indian rap icon Divine.\n\nHe is also a founding member of Goa Trap Culture (GTC), a creative collective blending rap, pop, indie, rock, and trap, contributing to a new sonic identity for modern Goan music.\n\nHe has contributed rap verses to Bollywood film projects, including works associated with films like 'Dhurandhar' and 'War 2'.\n\nHis deluxe album 'A Message From The Moon' features collaborations with prominent Indian artists like Calm and Yashraj, along with international names.\n\n**Musical Style**\n• English-language rap with melodic pop hooks\n• Influences from trap, indie pop, and alternative music\n\n**Popular Tracks**\n• Sometimes You Don't Even Text\n• Pink Blue\n• Funkey Monkey\n• Perfect Life\n\n**Film & Collaborations**\n• Dhurandhar\n• War 2",
     "awards": "🏆 MTV Europe Music Awards – Best Indian Local Act (2023)\n\n🏆 Youngest and first Goan artist signed to Gully Gang Records at the age of 19\n\n🏆 Named among Goan Insider’s “50 Most Influential People” (2021).",
     "impact": "Tsumyoki’s music has contributed to making Goa a recognised name in the indie and hip-hop community, inspiring a generation of young artists and expanding the boundaries of regional music into mainstream hip-hop. His work reflects a Bollywood-influenced hip-hop context where Indian youth music intersects with cinema culture — especially since hip-hop in India is now widely linked to films and mainstream pop culture."
+  },
+  {
+    "name": "DJ Skeletron",
+    "genre": "EDM | House | Electronic",
+    "origin": "Goa, India",
+    "instagram": "skeletron_music",
+    "youtube":"SkeletronMusic",
+    "leadSinger":"none",
+    "image": skeletronProfile,
+    "bio": "DJ Skeletron (Allan D’souza) is an electronic DJ and music producer based in Goa, India, known for delivering high-energy club and festival performances. His sound blends modern EDM and house with global electronic influences, creating sets that resonate with both international audiences and India’s vibrant nightlife scene.\n\nHe gained wider recognition for his remix of the Bollywood tracks “Hai Jamalo” from the film Munjya and “Gehraiyaan” from the film Gehraiyaan, which was officially signed and released by Sony Music India.\n\nA defining element of DJ Skeletron’s performances is his Bollywood-themed electronic sets, where he fuses classic and contemporary Bollywood hits with EDM, house, and tribal tech elements.\n\nAlongside his remixes, Skeletron has also produced several regional hits, including “Run Around Town,” “Nach Re,” “Fuloi Re Fuloi Go,” and “Ringa Ringa,” among others.",
+    "impact": "Skeletron’s Bollywood remix work and live sets have helped merge mainstream Indian cinema music with EDM and festival culture — a style that has become increasingly popular in nightlife and festival spaces and expands Bollywood’s influence into electronic music realms."
   },
   {
     "name": "MARK REVLON BAND",

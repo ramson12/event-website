@@ -1,11 +1,11 @@
 import londonPoster from "../assets/posters/fusionFest-London.png";
 import manchesterPoster from "../assets/posters/fusionFest-Manchester.png";
 import leicesterPoster from "../assets/posters/fusionFest-Leicester.png";
-import swindonPoster from "../assets/posters/fusionFest-Swindon.png";
+import pastp from "../assets/posters/paste1.jpg";
 const events = [
     {
       id:1,
-      title: "FusionFest 2006 - Harrow",
+      title: "FusionFest 2006 - North London",
       location: "Byron Hall, Harrow",
       date: "2026-07-12",
       time: "7:00 PM",
@@ -47,15 +47,25 @@ const events = [
       artists:["Tsumyoki","DJ Skeletron","Mark Revlon Band"]
     },
   
+    {
+      id:5,
+      title: "FusionFest 2006 - West London",
+      location: "West London",
+      date: "2026-08-02",
+      time: "7:00 PM",
+      category: "Music Festival",
+      image:leicesterPoster,
+      artists:["Tsumyoki","DJ Skeletron","Mark Revlon Band"]
+    },
 
     {
       id:6,
-      title: "Beatshow",
+      title: "FusionFest 2006 - West London",
       location: "Byron Hall, Harrow, London, HA3 5BD",
       date: "27 July 2025",
       time: "11am -8pm",
       category: "Music Festival",
-      image:londonPoster,
+      image:pastp,
       "eventAbout":"Beatshow was an unforgettable experience filled with energy, music, and culture. The night brought together diverse audiences, electrifying performances, and moments that will be remembered for years.",
       "attendenceCount":"3000+",
       "artistCount":"12+",

@@ -51,14 +51,14 @@ export default function EventDetails() {
     </h1>
 
     <p className="mt-4 text-gray-300 text-sm tracking-widest uppercase">
-      London | Manchester | Leicester | Swindon
+      North London | Manchester | Leicester | Swindon | West London
     </p>
 
     {/* TOUR DATES */}
     <div className="flex justify-center items-center gap-10 mt-10 text-sm text-gray-300 flex-wrap">
 
   <div>
-    <p className="text-gray-400 uppercase text-xs">Harrow</p>
+    <p className="text-gray-400 uppercase text-xs">North London</p>
     <p className="text-lg font-semibold text-white">12 Jul 2026</p>
   </div>
 
@@ -86,7 +86,7 @@ export default function EventDetails() {
   <div className="h-10 w-px bg-white/30" />
 
   <div>
-    <p className="text-gray-400 uppercase text-xs">Heathrow</p>
+    <p className="text-gray-400 uppercase text-xs">West London</p>
     <p className="text-lg font-semibold text-white">02 Aug 2026</p>
   </div>
 

@@ -44,7 +44,7 @@ export default function Contact() {
               href="tel:+15551234567"
               className="text-lg font-semibold hover:text-pink-400 transition"
             >
-              +1 (555) 123-4567
+              +44 7886 384599
             </a>
           </motion.div>
 
@@ -65,10 +65,10 @@ export default function Contact() {
             </p>
 
             <a
-              href="mailto:hello@eventpro.com"
+              href="mailto:Dreamteamevents@protonmail.com"
               className="text-lg font-semibold hover:text-pink-400 transition"
             >
-              hello@eventpro.com
+              Dreamteamevents@protonmail.com
             </a>
           </motion.div>
 
@@ -89,8 +89,8 @@ export default function Contact() {
             </p>
 
             <p className="text-sm leading-relaxed text-gray-300">
-              123 Event Street<br />
-              City, State 12345
+            30 Horsham Road, <br />
+              Feltham, United Kingdom TW14 8LW
             </p>
           </motion.div>
 

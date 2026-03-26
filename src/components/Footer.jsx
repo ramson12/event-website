@@ -52,12 +52,12 @@ export default function Footer() {
                 Contact
               </h4>
               <ul className="space-y-2 text-sm">
-                <li>Phone: +1 (555) 123-4567</li>
-                <li>Email: hello@eventpro.com</li>
+                <li>Phone: +44 7886 384599</li>
+                <li>Email: Dreamteamevents@protonmail.com</li>
                 <li>
-                  Address: 123 Event Street,
+                30 Horsham Road, 
                   <br />
-                  City, State 12345
+                  Feltham, United Kingdom TW14 8LW
                 </li>
               </ul>
             </div>
