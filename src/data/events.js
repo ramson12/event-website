@@ -1,7 +1,7 @@
 import londonPoster from "../assets/posters/fusionFest-London.png";
 import manchesterPoster from "../assets/posters/fusionFest-Manchester.png";
 import leicesterPoster from "../assets/posters/fusionFest-Leicester.png";
-import pastp from "../assets/posters/paste1.jpg";
+import pastp from "../assets/posters/fusionFest-Leicester.png";
 const events = [
     {
       id:1,
