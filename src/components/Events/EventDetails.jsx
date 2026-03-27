@@ -11,7 +11,13 @@ import { useEffect } from "react";
 
 
 export default function EventDetails() {
-
+  const logos = [
+    "https://cdn.simpleicons.org/spotify/white",
+    "https://cdn.simpleicons.org/amazon/white",
+    "https://cdn.simpleicons.org/ibm/white",
+    "https://cdn.simpleicons.org/microsoft/white",
+    "https://cdn.simpleicons.org/netflix/white",
+  ];
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -144,52 +150,40 @@ export default function EventDetails() {
       {/*<StageSchedule />*/}
 
       {/* SPONSORSHIP */}
-      <section className="bg-zinc-950 py-24 px-6">
+      <section className="bg-black py-20 overflow-hidden">
 
-        <h2 className="text-center text-3xl font-bold mb-16">
-          Sponsorship Opportunities
-        </h2>
+      <h2 className="text-center text-3xl md:text-4xl font-bold mb-16">
+        Our Partners
+      </h2>
 
-        <div className="grid md:grid-cols-4 gap-10 max-w-6xl mx-auto">
 
-          {[
-            {
-              title:"Platinum Partner",
-              items:["Title sponsorship","Main stage branding","VIP access","Meet & greet"]
-            },
-            {
-              title:"Gold Partner",
-              items:["City branding","VIP passes","Social media promotion"]
-            },
-            {
-              title:"Silver Partner",
-              items:["Logo on posters","Social mentions","Festival zone visibility"]
-            },
-            {
-              title:"Community Partner",
-              items:["Website recognition","Local stage announcements"]
-            },
-          ].map((tier)=>(
-            <div key={tier.title} className="bg-zinc-900 p-6 rounded-xl">
+      {/* CENTER FEATURED LOGOS */}
+      <div className="flex justify-center items-center gap-20 flex-wrap mb-12">
 
-              <h3 className="text-xl font-semibold mb-4">
-                {tier.title}
-              </h3>
+        {[
+          "https://cdn.simpleicons.org/google/white",
+          "https://cdn.simpleicons.org/nike/white",
+          "https://cdn.simpleicons.org/adidas/white",
+        ].map((logo) => (
+          <div key={logo} className="group relative">
 
-              <ul className="space-y-2 text-gray-400 text-sm">
-                {tier.items.map(i=>(
-                  <li key={i}>• {i}</li>
-                ))}
-              </ul>
+            <div className="absolute inset-0 bg-white/10 blur-xl opacity-0 group-hover:opacity-100 transition duration-500 rounded-full" />
 
-            </div>
-          ))}
+            <img
+              src={logo}
+              className="relative h-16 md:h-20 object-contain 
+              opacity-90 
+              group-hover:opacity-100 
+              group-hover:scale-110 
+              transition duration-500"
+            />
+          </div>
+        ))}
 
-        </div>
+      </div>
+
 
       </section>
-
-
       {/* FESTIVAL STATEMENT */}
       <section className="py-24 px-6 text-center">
 

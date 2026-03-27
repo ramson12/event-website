@@ -59,10 +59,11 @@ export default function EventCard({ event }) {
         <p className="text-xs text-gray-400 uppercase">{month}</p>
       </div>
 
-      {/* CATEGORY */}
+      {/* CATEGORY
       <div className="absolute top-4 right-4 text-xs bg-pink-500/80 px-3 py-1 rounded-full">
         {event.category}
       </div>
+       */}
 
       {/* CONTENT */}
       <div className="absolute bottom-0 p-5 text-white">

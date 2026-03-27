@@ -38,3 +38,11 @@ html, body {
 ::-webkit-scrollbar-thumb:hover {
   background: #ec4899;
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -1,30 +1,54 @@
-import { useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import events from "../../data/events";
 import EventCard from "./EventCard";
-import { motion } from "framer-motion";
 
-export default function EventsSection({ onSelectEvent }) {
-
+export default function EventsSection() {
   const [filter, setFilter] = useState("upcoming");
+
+  const scrollRef = useRef(null);
+
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
 
   const today = new Date();
 
-  /* FILTER LOGIC */
-  const filteredEvents = events
-    .filter((event) => {
-      const eventDate = new Date(event.date);
+  const filteredEvents = events.filter((event) => {
+    const eventDate = new Date(event.date);
+    return filter === "upcoming"
+      ? eventDate >= today
+      : eventDate < today;
+  });
 
-      if (filter === "upcoming") return eventDate >= today;
-      if (filter === "past") return eventDate < today;
+  // 👉 CHECK SCROLL POSITION
+  const updateScroll = () => {
+    const el = scrollRef.current;
+    if (!el) return;
 
-      return true;
-    })
-    .sort((a, b) => new Date(a.date) - new Date(b.date));
+    setCanScrollLeft(el.scrollLeft > 0);
+    setCanScrollRight(
+      el.scrollLeft < el.scrollWidth - el.clientWidth - 5
+    );
+  };
 
-  /* COUNTS */
-  const counts = {
-    upcoming: events.filter(e => new Date(e.date) >= today).length,
-    past: events.filter(e => new Date(e.date) < today).length
+  // 👉 RUN ON LOAD + FILTER CHANGE
+  useEffect(() => {
+    setTimeout(updateScroll, 100);
+  }, [filteredEvents]);
+
+  // 👉 SCROLL FUNCTION
+  const scroll = (dir) => {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    const amount = 320;
+
+    el.scrollBy({
+      left: dir === "left" ? -amount : amount,
+      behavior: "smooth"
+    });
+
+    // update after scroll
+    setTimeout(updateScroll, 300);
   };
 
   return (
@@ -32,82 +56,132 @@ export default function EventsSection({ onSelectEvent }) {
       <div className="max-w-7xl mx-auto text-white">
 
         {/* HEADER */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center max-w-2xl mx-auto mb-10"
-        >
+        <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold">
             Events & Festivals
           </h2>
-
-          <p className="mt-4 text-gray-400 text-sm md:text-base">
+          <p className="mt-3 text-gray-400">
             Where moments turn into memories.
           </p>
-        </motion.div>
+        </div>
 
-        {/* PREMIUM FILTER BUTTONS */}
-        <div className="flex justify-center mb-14">
+        {/* TOGGLE */}
+        <div className="flex justify-center mb-12">
+          <div className="relative bg-zinc-900 rounded-full p-1 flex w-[260px]">
 
-          <div className="relative flex bg-zinc-900 rounded-full p-1 border-zinc-700 w-[260px]">
-
-            {/* SLIDING INDICATOR */}
-            <motion.div
-              layout
-              transition={{ type: "spring", stiffness: 300, damping: 25 }}
-              className={`
-              absolute top-1 bottom-1
-              w-[calc(50%-4px)]
-              rounded-full bg-pink-500
-              shadow-[0_0_12px_rgba(236,72,153,0.6)]
-              `}
-              style={{
-                left: filter === "upcoming" ? "4px" : "calc(50% + 2px)"
-              }}
+            <div
+              className={`absolute top-1 bottom-1 w-1/2 rounded-full bg-pink-500 transition-all duration-300 ${
+                filter === "upcoming" ? "left-1" : "left-1/2"
+              }`}
             />
 
-            {/* BUTTONS */}
-            {["upcoming", "past"].map((type) => (
-              <button
-                key={type}
-                onClick={() => setFilter(type)}
-                className={`
-                  relative z-10 w-1/2 py-2 text-sm uppercase tracking-wide transition
-                  ${filter === type ? "text-white" : "text-gray-400"}
-                `}
-              >
-                {type}
-              </button>
-            ))}
+            <button
+              onClick={() => setFilter("upcoming")}
+              className={`flex-1 py-2 text-sm z-10 ${
+                filter === "upcoming" ? "text-white" : "text-gray-400"
+              }`}
+            >
+              Upcoming
+            </button>
 
+            <button
+              onClick={() => setFilter("past")}
+              className={`flex-1 py-2 text-sm z-10 ${
+                filter === "past" ? "text-white" : "text-gray-400"
+              }`}
+            >
+              Past
+            </button>
+
+          </div>
+        </div>
+
+        {/* SLIDER */}
+        <div className="relative">
+
+          {/* LEFT ARROW */}
+          {canScrollLeft && (
+            <button
+            onClick={() => scroll("left")}
+            className="
+              absolute left-0 top-1/2 -translate-y-1/2 z-10
+              w-10 h-10 rounded-full
+              bg-black/70 backdrop-blur
+              flex items-center justify-center
+              hover:bg-pink-500 hover:scale-110 active:scale-95 transition
+            "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-5 h-5 text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+          )}
+
+          {/* RIGHT ARROW  border border-pink-500*/}
+          {canScrollRight && (
+            <button
+            onClick={() => scroll("right")}
+            className="
+              absolute right-0 top-1/2 -translate-y-1/2 z-10
+              w-10 h-10 rounded-full
+              bg-black/70 backdrop-blur
+              flex items-center justify-center
+              hover:bg-pink-500 hover:scale-110 active:scale-95 transition
+            "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-5 h-5 text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+          )}
+
+          {/* SCROLL CONTAINER */}
+          <div
+            ref={scrollRef}
+            onScroll={updateScroll}
+            className="
+              flex gap-6 overflow-x-auto pb-4 pt-4
+              scroll-smooth scrollbar-hide
+              snap-x snap-mandatory
+            "
+          >
+            {filteredEvents.map((event) => (
+              <div key={event.id} className="min-w-[280px] max-w-[280px] snap-start">
+                <EventCard event={event} />
+              </div>
+            ))}
           </div>
 
         </div>
 
-        {/* EVENTS GRID */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
-        >
-
-          {filteredEvents.length > 0 ? (
-            filteredEvents.map((event) => (
-              <EventCard
-                key={event.id}
-                event={event}
-                onSelect={onSelectEvent}
-              />
-            ))
-          ) : (
-            <p className="text-center col-span-full text-gray-400">
-              No events found.
-            </p>
-          )}
-
-        </motion.div>
+        {/* EMPTY STATE */}
+        {filteredEvents.length === 0 && (
+          <p className="text-center text-gray-400 mt-10">
+            No events found.
+          </p>
+        )}
 
       </div>
     </section>
