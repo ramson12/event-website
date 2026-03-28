@@ -31,7 +31,7 @@ export default function About() {
           className="space-y-6 text-gray-300 leading-relaxed text-center"
         >
           <p>
-            DreamTeam11 started the way the best stories do — with a tight-knit
+            DreamTeam11 Ltd Established in 2025. The company started the way the best stories do — with a tight-knit
             group of friends and family battling it out in fantasy football
             leagues. What began as weekend fun soon shaped a brotherhood, a
             bond, and a spark.

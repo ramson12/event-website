@@ -71,8 +71,8 @@ export default function EventDetails() {
   <div className="h-10 w-px bg-white/30" />
 
   <div>
-    <p className="text-gray-400 uppercase text-xs">Manchester</p>
-    <p className="text-lg font-semibold text-white">18 Jul 2026</p>
+    <p className="text-gray-400 uppercase text-xs">Leicester</p>
+    <p className="text-lg font-semibold text-white">01 Aug 2026</p>
   </div>
 
   <div className="h-10 w-px bg-white/30" />
@@ -85,8 +85,8 @@ export default function EventDetails() {
   <div className="h-10 w-px bg-white/30" />
 
   <div>
-    <p className="text-gray-400 uppercase text-xs">Leicester</p>
-    <p className="text-lg font-semibold text-white">01 Aug 2026</p>
+    <p className="text-gray-400 uppercase text-xs">Manchester</p>
+    <p className="text-lg font-semibold text-white">18 Jul 2026</p>
   </div>
 
   <div className="h-10 w-px bg-white/30" />
@@ -149,15 +149,13 @@ export default function EventDetails() {
 
       {/*<StageSchedule />*/}
 
-      {/* SPONSORSHIP */}
+      {/* SPONSORSHIP 
       <section className="bg-black py-20 overflow-hidden">
 
       <h2 className="text-center text-3xl md:text-4xl font-bold mb-16">
         Our Partners
       </h2>
 
-
-      {/* CENTER FEATURED LOGOS */}
       <div className="flex justify-center items-center gap-20 flex-wrap mb-12">
 
         {[
@@ -181,9 +179,8 @@ export default function EventDetails() {
         ))}
 
       </div>
-
-
       </section>
+      */}
       {/* FESTIVAL STATEMENT */}
       <section className="py-24 px-6 text-center">
 

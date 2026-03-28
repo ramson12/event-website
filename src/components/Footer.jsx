@@ -25,7 +25,7 @@ export default function Footer() {
               <ul className="space-y-2 text-sm">
                 <li>
                   <a href="#events" className="hover:text-white transition">
-                    Events
+                    Events & Festivals
                   </a>
                 </li>
                 <li>
@@ -66,7 +66,7 @@ export default function Footer() {
   
           {/* BOTTOM BAR */}
           <div className="mt-12 pt-6 border-t border-white/10 text-center text-sm">
-            © {new Date().getFullYear()} DreamTeam11. All rights reserved.
+            © DreamTeam11. All rights reserved.
           </div>
   
         </div>
