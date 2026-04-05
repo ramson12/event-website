@@ -1,6 +1,11 @@
 import londonPoster from "../assets/posters/fusionFest-London.png";
+import London from "../assets/posters/e1.jpeg";
+import Manchester from "../assets/posters/e2.jpeg";
+import Swindon from "../assets/posters/e3.jpeg";
+import Leicester from "../assets/posters/e4.jpeg";
 import manchesterPoster from "../assets/posters/fusionFest-Manchester.png";
 import leicesterPoster from "../assets/posters/fusionFest-Leicester.png";
+import event3 from "../assets/posters/event3.jpeg";
 import pastp from "../assets/posters/p1.jpeg";
 import past2 from "../assets/posters/P2.jpeg";
 import past3 from "../assets/posters/P3.jpeg";
@@ -13,7 +18,7 @@ const events = [
       date: "2026-07-12",
       time: "2:00 PM to 10:00 PM",
       //category: "Music Festival",
-      image:londonPoster,
+      image:London,
       artists:["Tsumyoki","DJ Skeletron","Mark Revlon Band"]
     },
   
@@ -24,7 +29,7 @@ const events = [
       date: "2026-07-18",
       time: "2:00 PM to 10:00 PM",
       //category: "Music Festival",
-      image:londonPoster,
+      image:Manchester,
       artists:["Tsumyoki","DJ Skeletron","Mark Revlon Band"]
     },
   
@@ -35,7 +40,7 @@ const events = [
       date: "2026-07-24",
       time: "7:00 PM to 2:00 AM",
       //category: "Music Festival",
-      image:londonPoster,
+      image:Swindon,
       artists:["Tsumyoki","DJ Skeletron","Mark Revlon Band"]
     },
   
@@ -46,7 +51,7 @@ const events = [
       date: "2026-08-01",
       time: "2:00 PM to 10:00 PM",
       //category: "Music Festival",
-      image:leicesterPoster,
+      image:Leicester,
       artists:["Tsumyoki","DJ Skeletron","Mark Revlon Band"]
     },
   
@@ -57,7 +62,7 @@ const events = [
       date: "2026-08-02",
       time: "07:00 PM to 02:00 AM",
       //category: "Music Festival",
-      image:leicesterPoster,
+      image:event3,
       artists:["Tsumyoki","DJ Skeletron","Mark Revlon Band"]
     },
 
