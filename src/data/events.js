@@ -8,10 +8,10 @@ import past3 from "../assets/posters/P3.jpeg";
 const events = [
     {
       id:1,
-      title: "FusionFest 2006 - North London",
+      title: "FusionFest 2026 - London",
       location: "Byron Hall, Harrow",
       date: "2026-07-12",
-      time: "2:00 PM to 11:30 PM",
+      time: "2:00 PM to 10:00 PM",
       //category: "Music Festival",
       image:londonPoster,
       artists:["Tsumyoki","DJ Skeletron","Mark Revlon Band"]
@@ -19,10 +19,10 @@ const events = [
   
     {
       id:2,
-      title: "FusionFest 2006 - Manchester",
+      title: "FusionFest 2026 - Manchester",
       location: "Lighthouse, Manchester",
       date: "2026-07-18",
-      time: "2:00 PM to 11:30 PM",
+      time: "2:00 PM to 10:00 PM",
       //category: "Music Festival",
       image:londonPoster,
       artists:["Tsumyoki","DJ Skeletron","Mark Revlon Band"]
@@ -30,10 +30,10 @@ const events = [
   
     {
       id:3,
-      title: "FusionFest 2006 - Swindon",
+      title: "FusionFest 2026 - Swindon",
       location: "Venue 3, Swindon",
       date: "2026-07-24",
-      time: "7:00 PM to 3:00 AM",
+      time: "7:00 PM to 2:00 AM",
       //category: "Music Festival",
       image:londonPoster,
       artists:["Tsumyoki","DJ Skeletron","Mark Revlon Band"]
@@ -41,10 +41,10 @@ const events = [
   
     {
       id:4,
-      title: "FusionFest 2006 - Leicester",
+      title: "FusionFest 2026 - Leicester",
       location: "Ramgarhia Hall, Leicester",
       date: "2026-08-01",
-      time: "2:00 PM to 11:00 AM",
+      time: "2:00 PM to 10:00 PM",
       //category: "Music Festival",
       image:leicesterPoster,
       artists:["Tsumyoki","DJ Skeletron","Mark Revlon Band"]
@@ -52,10 +52,10 @@ const events = [
   
     {
       id:5,
-      title: "FusionFest 2006 - West London",
-      location: "West London",
+      title: "FusionFest 2026 - Heathrow",
+      location: "Thistle Hotel",
       date: "2026-08-02",
-      time: "07:00 PM to 02:00 PM",
+      time: "07:00 PM to 02:00 AM",
       //category: "Music Festival",
       image:leicesterPoster,
       artists:["Tsumyoki","DJ Skeletron","Mark Revlon Band"]
@@ -70,7 +70,7 @@ const events = [
       //category: "Music Festival",
       image:past3,
       eventAbout:"Beatshow was an unforgettable experience filled with energy, music, and culture. The night brought together diverse audiences, electrifying performances, and moments that will be remembered for years.",
-      attendenceCount:"3000+",
+      attendenceCount:"2000+",
       artistCount:"12+",
       artists:["Artist1","Artist2"],
       status: "soldout"
@@ -84,7 +84,7 @@ const events = [
       //category: "Music Festival",
       image:past2,
       "eventAbout":"Beatshow After party was an unforgettable experience filled with energy, music, and culture. The night brought together diverse audiences, electrifying performances, and moments that will be remembered for years.",
-      "attendenceCount":"1500+",
+      "attendenceCount":"500+",
       "artistCount":"7+",
       status: "soldout"
     },
@@ -92,12 +92,12 @@ const events = [
       id:8,
       title: "Freedom Blast",
       location: "Thistle Heathrow (Terminal 5), Uxbridge, UB7 0EQ",
-      date: "27 July 2025",
+      date: "15 Aug 2025",
       time: "09:00 PM - 01:00 AM",
       //category: "Music Festival",
       image:pastp,
       "eventAbout":"Freedom Blast was an unforgettable experience filled with energy, music, and culture. The night brought together diverse audiences, electrifying performances, and moments that will be remembered for years.",
-      "attendenceCount":"1500+",
+      "attendenceCount":"750+",
       "artistCount":"7+",
       status: "soldout"
     }

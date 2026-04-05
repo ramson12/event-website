@@ -30,7 +30,7 @@ export default function Hero() {
         </h1>
 
         <p className="mt-6 text-gray-300 text-lg">
-          Music Concerts · EDM Festivals · Weddings · Private Parties
+          Music Concerts · Cultural Events · Weddings · Private Parties
         </p>
 
         <motion.div
