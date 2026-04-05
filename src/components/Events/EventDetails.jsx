@@ -53,7 +53,7 @@ export default function EventDetails() {
   <div className="relative z-10 max-w-5xl px-6">
 
     <h1 className="text-5xl md:text-6xl font-bold tracking-wide">
-      FUSIONFEST 2006 — UK TOUR
+      FUSIONFEST 2026 — UK TOUR
     </h1>
 
     <p className="mt-4 text-gray-300 text-sm tracking-widest uppercase">
