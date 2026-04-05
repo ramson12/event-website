@@ -42,7 +42,7 @@ const events = [
     {
       id:4,
       title: "FusionFest 2006 - Leicester",
-      location: "Ramgharia Hall, Leicester",
+      location: "Ramgarhia Hall, Leicester",
       date: "2026-08-01",
       time: "2:00 PM to 11:00 AM",
       //category: "Music Festival",
