@@ -118,7 +118,7 @@ export default function FestivalLineupSlider() {
                 rel="noopener noreferrer"
                 className="text-red-400"
               >
-                @{artist.youtube}
+                 {artist.youtube ? `@${artist.youtube}` : ""}
               </a>
             </p>
 

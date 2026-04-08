@@ -8,8 +8,8 @@ import FLACID from "../assets/festival/artist/FLACID.jpeg";
 import Bunty from "../assets/festival/artist/Bunty.jpeg";
 import Enrico from "../assets/festival/artist/Enrico.jpeg";
 import BKS from "../assets/festival/artist/best1.JPG";
-import host1 from "../assets/festival/artist/mc1.jpeg";
-import host2 from "../assets/festival/artist/host2.JPG";
+import host1 from "../assets/festival/artist/mc1111.jpg";
+import host2 from "../assets/festival/artist/ed2.jpg";
 
 const artists = [
   {
@@ -128,8 +128,8 @@ const artists = [
     "name": "Tahlia Rowena Coutinho",
     "genre": "Host | MC",
     "origin": "London United Kingdom",
-    "instagram": "energetichostbuntyvas",
-    "youtube":"Youtube link",
+    "instagram": "tahlia_coutinho",
+    "youtube":"",
     "leadSinger":"none",
     "image": host1,
     "bio": "London-based presenter and model with international experience hosting festivals and live events. Tahlia has collaborated with leading global brands and is highly confident both on screen and in front of live audiences, bringing energy, professionalism, and a natural ability to connect with people.",
@@ -144,7 +144,7 @@ const artists = [
     "instagram": "echendrix",
     "youtube":"EdmarCamaraHendricks",
     "leadSinger":"none",
-    "image": Bunty,
+    "image": host2,
     "bio": "Goa‑based MC known for strong stage presence in electronic dance music events, expert at energising multicultural audiences and managing transitions between artists. ",
     "awards": "",
     "impact": "Echendrix represents the modern MC — a cultural connector who enhances live experiences by uniting artists and audiences, ensuring festivals feel immersive, inclusive and high-energy."
@@ -155,7 +155,7 @@ const artists = [
     "genre": "Host | MC",
     "origin": "London United Kingdom",
     "instagram": "energetichostbuntyvas",
-    "youtube":"Youtube link",
+    "youtube":"",
     "leadSinger":"none",
     "image": Bunty,
     "bio": "London‑based charismatic host who keeps events dynamic, maintains high energy and ensures memorable festival experiences.",
