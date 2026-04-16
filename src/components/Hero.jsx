@@ -26,7 +26,7 @@ export default function Hero() {
         className="relative z-10 text-center px-6 max-w-4xl"
       >
         <h1 className="text-4xl md:text-6xl font-bold uppercase">
-          We Create <span className="text-pink-500">Unforgettable</span> Events
+          We Create <span className="text-pink-500">Unforgettable</span> Moments
         </h1>
 
         <p className="mt-6 text-gray-300 text-lg">

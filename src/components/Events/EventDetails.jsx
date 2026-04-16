@@ -98,8 +98,8 @@ export default function EventDetails() {
 
 </div>
 
-    <p className="mt-10 text-pink-400 text-lg tracking-wide">
-      WHERE CULTURES, BEATS & COMMUNITIES UNITE
+    <p className="mt-10 text-brand text-lg tracking-wide">
+    Bringing Communities Together Through Music, Food & Culture 
     </p>
 
   </div>
