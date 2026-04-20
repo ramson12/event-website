@@ -18,23 +18,20 @@ export default function EventCard({ event }) {
     }
   };
 
-
   return (
     <motion.div
-      whileHover={{ y: -8 }}
-      transition={{ duration: 0.25 }}
+      whileHover={{ y: -10 }}
+      transition={{ duration: 0.3 }}
       onClick={handleClick}
       className="
-      group relative
-      h-[360px]
-      rounded-2xl
-      overflow-hidden
-      cursor-pointer
-      bg-zinc-900
-      border border-zinc-800
-      hover:border-pink-500/40
-      hover:shadow-[0_0_35px_rgba(236,72,153,0.25)]
-      transition-all
+        group relative
+        h-[360px]
+        rounded-2xl overflow-hidden
+        cursor-pointer
+        bg-zinc-900/80 backdrop-blur-xl
+        border border-white/5
+        hover:shadow-[0_0_40px_rgba(255,120,0,0.25)]
+        transition-all duration-300
       "
     >
       {/* IMAGE */}
@@ -42,31 +39,33 @@ export default function EventCard({ event }) {
         src={event.image}
         alt={event.title}
         className="
-        absolute inset-0
-        w-full h-full
-        object-cover
-        transition-transform duration-700
-        group-hover:scale-110
+          absolute inset-0 w-full h-full object-cover
+          transition-transform duration-700
+          group-hover:scale-110
         "
       />
 
-      {/* DARK GRADIENT */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+      {/* OVERLAY */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
+
+      {/* HOVER GLOW */}
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#ff9a44]/10 to-[#ff6a00]/10" />
+      </div>
 
       {/* DATE BADGE */}
-      <div className="absolute top-4 left-4 bg-black/70 backdrop-blur px-3 py-1 rounded-md text-center">
+      <div className="
+        absolute top-4 left-4 
+        bg-black/70 backdrop-blur 
+        px-3 py-1 rounded-md text-center
+        border border-white/10
+      ">
         <p className="text-white text-sm font-bold">{day}</p>
         <p className="text-xs text-gray-400 uppercase">{month}</p>
       </div>
 
-      {/* CATEGORY
-      <div className="absolute top-4 right-4 text-xs bg-pink-500/80 px-3 py-1 rounded-full">
-        {event.category}
-      </div>
-       */}
-
       {/* CONTENT */}
-      <div className="absolute bottom-0 p-5 text-white">
+      <div className="absolute bottom-0 p-5 text-white w-full">
 
         <h3 className="text-lg font-semibold">
           {event.title}
@@ -80,19 +79,23 @@ export default function EventCard({ event }) {
           🎵 {event.artists?.join(" • ")}
         </p>
 
-        <p className="mt-3 text-sm text-pink-400 font-medium">
+        {/* CTA */}
+        <p className="
+          mt-4 text-sm font-medium
+          bg-gradient-to-r from-[#ff9a44] to-[#ff6a00]
+          bg-clip-text text-transparent
+        ">
           View Event →
         </p>
-
       </div>
 
-      {/* PROGRESS LINE */}
+      {/* BOTTOM ACCENT LINE */}
       <div className="
-      absolute bottom-0 left-0 h-[2px] w-0
-      bg-pink-500
-      group-hover:w-full
-      transition-all duration-500
-      "/>
+        absolute bottom-0 left-0 h-[2px] w-0
+        bg-gradient-to-r from-[#ff9a44] to-[#ff6a00]
+        group-hover:w-full
+        transition-all duration-500
+      " />
     </motion.div>
   );
 }

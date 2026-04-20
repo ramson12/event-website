@@ -29,7 +29,6 @@ export default function PastEventDetails() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
-  /* KEYBOARD NAV */
   useEffect(() => {
     const handleKey = (e) => {
       if (lightboxIndex === null) return;
@@ -45,7 +44,7 @@ export default function PastEventDetails() {
     return <div className="text-white text-center py-20">Event not found</div>;
   }
 
-  /* ANIMATED STAT */
+  /* COUNTER */
   const Stat = ({ value, label }) => {
     const [count, setCount] = useState(0);
 
@@ -104,13 +103,21 @@ export default function PastEventDetails() {
             {event.location} • {event.date}
           </p>
 
+          {/* SOLD OUT */}
           {event.status === "soldout" && (
-            <div className="mt-6 inline-block px-6 py-2 rounded-full bg-pink-500/20 border border-pink-500/40 text-pink-400 text-sm tracking-wide uppercase">
-                🎟️ Sold Out
+            <div className="
+              mt-6 inline-block px-6 py-2 rounded-full
+              bg-gradient-to-r from-[#ff9a44]/20 to-[#ff6a00]/20
+              border border-[#ff9a44]/40
+              text-[#ff9a44]
+              text-sm tracking-wide uppercase
+            ">
+              🎟️ Sold Out
             </div>
-            )}
+          )}
 
-          <p className="mt-6 text-pink-400 text-lg">
+          {/* TAGLINE */}
+          <p className="mt-6 text-[#ff9a44] text-lg">
             A Night To Remember ✨
           </p>
 
@@ -126,7 +133,6 @@ export default function PastEventDetails() {
 
       </section>
 
-
       {/* RECAP */}
       <section className="py-20 px-6 text-center max-w-4xl mx-auto">
 
@@ -135,7 +141,8 @@ export default function PastEventDetails() {
           whileInView={{ opacity: 1, y: 0 }}
           className="text-3xl font-bold mb-6"
         >
-          Event Recap
+          Event{" "}
+          <span className="text-[#ff9a44]">Recap</span>
         </motion.h2>
 
         <p className="text-gray-400 leading-relaxed">
@@ -144,25 +151,23 @@ export default function PastEventDetails() {
 
       </section>
 
-
       {/* GALLERY */}
       <section className="py-20 px-6">
 
         <h2 className="text-center text-3xl font-bold mb-12">
-          Moments From The Night
+          Moments{" "}
+          <span className="text-[#ff9a44]">From The Night</span>
         </h2>
 
         <div className="columns-2 md:columns-4 gap-4 max-w-6xl mx-auto space-y-4">
 
           {gallery.map((img, i) => (
-
             <motion.div
               key={i}
               whileHover={{ scale: 1.03 }}
               onClick={() => openLightbox(i)}
               className="relative overflow-hidden rounded-xl group cursor-pointer"
             >
-
               <img
                 src={img}
                 className="w-full object-cover group-hover:scale-110 transition"
@@ -178,15 +183,12 @@ export default function PastEventDetails() {
                   FusionFest Moments
                 </p>
               </div>
-
             </motion.div>
-
           ))}
 
         </div>
 
       </section>
-
 
       {/* LIGHTBOX */}
       <AnimatePresence>
@@ -197,7 +199,6 @@ export default function PastEventDetails() {
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center"
           >
-
             <button onClick={closeLightbox} className="absolute top-6 right-6 text-3xl">✕</button>
             <button onClick={prevImage} className="absolute left-6 text-4xl">‹</button>
 
@@ -219,12 +220,12 @@ export default function PastEventDetails() {
         )}
       </AnimatePresence>
 
-
       {/* CTA */}
       <section className="py-24 text-center">
 
         <h2 className="text-4xl font-bold">
-          Don’t Miss The Next Experience
+          Don’t Miss The Next{" "}
+          <span className="text-[#ff9a44]">Experience</span>
         </h2>
 
         <p className="text-gray-400 mt-4">
@@ -233,7 +234,13 @@ export default function PastEventDetails() {
 
         <button
           onClick={() => navigate("/#events")}
-          className="mt-8 px-10 py-3 bg-pink-500 rounded-full hover:bg-pink-600 transition shadow-[0_0_20px_rgba(236,72,153,0.4)]"
+          className="
+            mt-8 px-10 py-3 rounded-full
+            bg-gradient-to-r from-[#ff9a44] to-[#ff6a00]
+            shadow-lg shadow-orange-500/30
+            hover:scale-105 hover:shadow-orange-500/50
+            transition-all duration-300
+          "
         >
           View Upcoming Events
         </button>

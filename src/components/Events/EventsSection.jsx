@@ -19,7 +19,6 @@ export default function EventsSection() {
       : eventDate < today;
   });
 
-  // 👉 CHECK SCROLL POSITION
   const updateScroll = () => {
     const el = scrollRef.current;
     if (!el) return;
@@ -30,12 +29,10 @@ export default function EventsSection() {
     );
   };
 
-  // 👉 RUN ON LOAD + FILTER CHANGE
   useEffect(() => {
     setTimeout(updateScroll, 100);
   }, [filteredEvents]);
 
-  // 👉 SCROLL FUNCTION
   const scroll = (dir) => {
     const el = scrollRef.current;
     if (!el) return;
@@ -47,7 +44,6 @@ export default function EventsSection() {
       behavior: "smooth"
     });
 
-    // update after scroll
     setTimeout(updateScroll, 300);
   };
 
@@ -58,7 +54,10 @@ export default function EventsSection() {
         {/* HEADER */}
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold">
-            Events & Festivals
+            Events &{" "}
+            <span className="bg-gradient-to-r from-[#ff9a44] to-[#ff6a00] bg-clip-text text-transparent">
+              Festivals
+            </span>
           </h2>
           <p className="mt-3 text-gray-400">
             Where moments turn into memories.
@@ -67,17 +66,20 @@ export default function EventsSection() {
 
         {/* TOGGLE */}
         <div className="flex justify-center mb-12">
-          <div className="relative bg-zinc-900 rounded-full p-1 flex w-[260px]">
+          <div className="relative bg-zinc-900 rounded-full p-1 flex w-[260px] shadow-inner">
 
+            {/* SLIDER */}
             <div
-              className={`absolute top-1 bottom-1 w-1/2 rounded-full bg-pink-500 transition-all duration-300 ${
+              className={`absolute top-1 bottom-1 w-1/2 rounded-full 
+              bg-gradient-to-r from-[#ff9a44] to-[#ff6a00]
+              shadow-md transition-all duration-300 ${
                 filter === "upcoming" ? "left-1" : "left-1/2"
               }`}
             />
 
             <button
               onClick={() => setFilter("upcoming")}
-              className={`flex-1 py-2 text-sm z-10 ${
+              className={`flex-1 py-2 text-sm z-10 transition ${
                 filter === "upcoming" ? "text-white" : "text-gray-400"
               }`}
             >
@@ -86,7 +88,7 @@ export default function EventsSection() {
 
             <button
               onClick={() => setFilter("past")}
-              className={`flex-1 py-2 text-sm z-10 ${
+              className={`flex-1 py-2 text-sm z-10 transition ${
                 filter === "past" ? "text-white" : "text-gray-400"
               }`}
             >
@@ -102,59 +104,61 @@ export default function EventsSection() {
           {/* LEFT ARROW */}
           {canScrollLeft && (
             <button
-            onClick={() => scroll("left")}
-            className="
-              absolute left-0 top-1/2 -translate-y-1/2 z-10
-              w-10 h-10 rounded-full
-              bg-black/70 backdrop-blur
-              flex items-center justify-center
-              hover:bg-pink-500 hover:scale-110 active:scale-95 transition
-            "
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-5 h-5 text-white"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth="2"
+              onClick={() => scroll("left")}
+              className="
+                absolute left-0 top-1/2 -translate-y-1/2 z-10
+                w-10 h-10 rounded-full
+                bg-black/70 backdrop-blur
+                flex items-center justify-center
+                hover:bg-gradient-to-r hover:from-[#ff9a44] hover:to-[#ff6a00]
+                hover:scale-110 active:scale-95 transition-all duration-300
+              "
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-5 h-5 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
           )}
 
-          {/* RIGHT ARROW  border border-pink-500*/}
+          {/* RIGHT ARROW */}
           {canScrollRight && (
             <button
-            onClick={() => scroll("right")}
-            className="
-              absolute right-0 top-1/2 -translate-y-1/2 z-10
-              w-10 h-10 rounded-full
-              bg-black/70 backdrop-blur
-              flex items-center justify-center
-              hover:bg-pink-500 hover:scale-110 active:scale-95 transition
-            "
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-5 h-5 text-white"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth="2"
+              onClick={() => scroll("right")}
+              className="
+                absolute right-0 top-1/2 -translate-y-1/2 z-10
+                w-10 h-10 rounded-full
+                bg-black/70 backdrop-blur
+                flex items-center justify-center
+                hover:bg-gradient-to-r hover:from-[#ff9a44] hover:to-[#ff6a00]
+                hover:scale-110 active:scale-95 transition-all duration-300
+              "
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-5 h-5 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
           )}
 
           {/* SCROLL CONTAINER */}
@@ -168,7 +172,10 @@ export default function EventsSection() {
             "
           >
             {filteredEvents.map((event) => (
-              <div key={event.id} className="min-w-[280px] max-w-[280px] snap-start">
+              <div
+                key={event.id}
+                className="min-w-[280px] max-w-[280px] snap-start"
+              >
                 <EventCard event={event} />
               </div>
             ))}
